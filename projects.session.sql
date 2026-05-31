@@ -1,0 +1,13 @@
+SHOW TABLEs;
+SELECT *
+FROM dim_customer
+LIMIT 5;
+SELECT *
+FROM dim_product
+LIMIT 5;
+SELECT *
+FROM dim_date
+LIMIT 5;
+SELECT *
+FROM fact_sales
+LIMIT 5;

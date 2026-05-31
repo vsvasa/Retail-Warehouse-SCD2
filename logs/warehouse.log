@@ -1,0 +1,297 @@
+2026-05-31 12:20:16,650 - INFO - warehouse connected to the database successfully
+2026-05-31 12:20:16,778 - INFO - Extracted 30000 records from customers.csv
+2026-05-31 12:20:16,779 - INFO - customer_id    int64
+first_name       str
+last_name        str
+email            str
+city             str
+state            str
+country          str
+dtype: object
+2026-05-31 12:20:16,793 - INFO - customer_id    0
+first_name     0
+last_name      0
+email          0
+city           0
+state          0
+country        0
+dtype: int64
+2026-05-31 12:20:16,794 - INFO -    customer_id first_name last_name                        email         city         state                country
+0            1       Mark      Chen   margaretclarke@example.com   Jamieburgh    New Jersey                 Tuvalu
+1            2   Virginia    Martin  stephanieramsey@example.com     Hullbury  Rhode Island  Saint Kitts and Nevis
+2            3    Jessica      Bell   jessicaswanson@example.com    Jamesside       Indiana            Afghanistan
+3            4     Ashley     Brown          kevin90@example.net  South Karen        Kansas                   Chad
+4            5    Natasha    Harvey           alec63@example.org    New Susan       Alabama                  Nauru
+2026-05-31 12:20:17,520 - INFO - Inserted rows 0 to 10000
+2026-05-31 12:20:18,149 - INFO - Inserted rows 10000 to 20000
+2026-05-31 12:20:18,713 - INFO - Inserted rows 20000 to 30000
+2026-05-31 12:20:18,713 - INFO - Loading into dim_customer
+2026-05-31 12:20:18,714 - INFO - Columns: ['customer_id', 'first_name', 'last_name', 'email', 'city', 'state', 'country']
+2026-05-31 12:20:18,715 - INFO - Loaded 30000 records into dim_customer
+2026-05-31 12:20:18,720 - INFO - Loaded 30000 records into dim_customer
+2026-05-31 12:20:18,732 - INFO - Extracted 1000 records from products.csv
+2026-05-31 12:20:18,733 - INFO - product_id        int64
+product_name        str
+category            str
+price           float64
+dtype: object
+2026-05-31 12:20:18,736 - INFO - product_id      0
+product_name    0
+category        0
+price           0
+dtype: int64
+2026-05-31 12:20:18,737 - INFO -    product_id product_name     category   price
+0           1      Serious       Sports  111.33
+1           2         Base       Sports  275.03
+2           3         Side     Clothing  139.54
+3           4         Hour  Electronics  676.70
+4           5       Detail        Books   86.94
+2026-05-31 12:20:18,812 - INFO - Inserted rows 0 to 1000
+2026-05-31 12:20:18,812 - INFO - Loading into dim_product
+2026-05-31 12:20:18,812 - INFO - Columns: ['product_id', 'product_name', 'category', 'price']
+2026-05-31 12:20:18,813 - INFO - Loaded 1000 records into dim_product
+2026-05-31 12:20:18,813 - INFO - Loaded 1000 records into dim_product
+2026-05-31 12:20:18,852 - INFO - date_key               int64
+full_date     datetime64[us]
+day_name                 str
+month_name               str
+month                  int32
+quarter                int32
+year                   int32
+dtype: object
+2026-05-31 12:20:18,856 - INFO - date_key      0
+full_date     0
+day_name      0
+month_name    0
+month         0
+quarter       0
+year          0
+dtype: int64
+2026-05-31 12:20:18,857 - INFO -             date_key  full_date   day_name month_name  month  quarter  year
+2024-01-01  20240101 2024-01-01     Monday    January      1        1  2024
+2024-01-02  20240102 2024-01-02    Tuesday    January      1        1  2024
+2024-01-03  20240103 2024-01-03  Wednesday    January      1        1  2024
+2024-01-04  20240104 2024-01-04   Thursday    January      1        1  2024
+2024-01-05  20240105 2024-01-05     Friday    January      1        1  2024
+2026-05-31 12:20:18,919 - ERROR - Error loading dim_date: 1062 (23000): Duplicate entry '20240101' for key 'dim_date.PRIMARY'
+2026-05-31 12:20:18,920 - INFO - Loaded 2557 records into dim_date
+2026-05-31 12:25:48,257 - INFO - loading sales data to the database
+2026-05-31 12:25:48,259 - INFO - customer_key      int64
+product_key     float64
+date_key          int64
+quantity          int64
+sale_amount     float64
+dtype: object
+2026-05-31 12:25:48,769 - INFO - customer_key          0
+product_key     6008112
+date_key              0
+quantity              0
+sale_amount           0
+dtype: int64
+2026-05-31 12:25:48,771 - INFO -    customer_key  product_key  date_key  quantity  sale_amount
+0         20953        457.0  20250218         1      3720.67
+1         20953       1457.0  20250218         1      3720.67
+2         20953       2457.0  20250218         1      3720.67
+3         20953       3457.0  20250218         1      3720.67
+4         20953       4457.0  20250218         1      3720.67
+2026-05-31 12:27:30,122 - ERROR - Error loading fact_sales_df: 1146 (42S02): Table 'warehouse.fact_sales_df' doesn't exist
+2026-05-31 12:27:38,718 - INFO - loaded sales data to the database successfully
+2026-05-31 12:27:38,780 - INFO - Warehouse dimension loaded successfully
+2026-05-31 12:28:56,038 - INFO - warehouse connected to the database successfully
+2026-05-31 12:28:56,222 - INFO - Extracted 30000 records from customers.csv
+2026-05-31 12:28:56,224 - INFO - customer_id    int64
+first_name       str
+last_name        str
+email            str
+city             str
+state            str
+country          str
+dtype: object
+2026-05-31 12:28:56,248 - INFO - customer_id    0
+first_name     0
+last_name      0
+email          0
+city           0
+state          0
+country        0
+dtype: int64
+2026-05-31 12:28:56,251 - INFO -    customer_id first_name last_name                        email         city         state                country
+0            1       Mark      Chen   margaretclarke@example.com   Jamieburgh    New Jersey                 Tuvalu
+1            2   Virginia    Martin  stephanieramsey@example.com     Hullbury  Rhode Island  Saint Kitts and Nevis
+2            3    Jessica      Bell   jessicaswanson@example.com    Jamesside       Indiana            Afghanistan
+3            4     Ashley     Brown          kevin90@example.net  South Karen        Kansas                   Chad
+4            5    Natasha    Harvey           alec63@example.org    New Susan       Alabama                  Nauru
+2026-05-31 12:28:57,212 - INFO - Inserted rows 0 to 10000
+2026-05-31 12:28:57,865 - INFO - Inserted rows 10000 to 20000
+2026-05-31 12:28:58,545 - INFO - Inserted rows 20000 to 30000
+2026-05-31 12:28:58,545 - INFO - Loading into dim_customer
+2026-05-31 12:28:58,546 - INFO - Columns: ['customer_id', 'first_name', 'last_name', 'email', 'city', 'state', 'country']
+2026-05-31 12:28:58,546 - INFO - Loaded 30000 records into dim_customer
+2026-05-31 12:28:58,552 - INFO - Loaded 30000 records into dim_customer
+2026-05-31 12:28:58,563 - INFO - Extracted 1000 records from products.csv
+2026-05-31 12:28:58,565 - INFO - product_id        int64
+product_name        str
+category            str
+price           float64
+dtype: object
+2026-05-31 12:28:58,568 - INFO - product_id      0
+product_name    0
+category        0
+price           0
+dtype: int64
+2026-05-31 12:28:58,570 - INFO -    product_id product_name     category   price
+0           1      Serious       Sports  111.33
+1           2         Base       Sports  275.03
+2           3         Side     Clothing  139.54
+3           4         Hour  Electronics  676.70
+4           5       Detail        Books   86.94
+2026-05-31 12:28:58,658 - INFO - Inserted rows 0 to 1000
+2026-05-31 12:28:58,658 - INFO - Loading into dim_product
+2026-05-31 12:28:58,659 - INFO - Columns: ['product_id', 'product_name', 'category', 'price']
+2026-05-31 12:28:58,660 - INFO - Loaded 1000 records into dim_product
+2026-05-31 12:28:58,661 - INFO - Loaded 1000 records into dim_product
+2026-05-31 12:28:58,734 - INFO - date_key               int64
+full_date     datetime64[us]
+day_name                 str
+month_name               str
+month                  int32
+quarter                int32
+year                   int32
+dtype: object
+2026-05-31 12:28:58,738 - INFO - date_key      0
+full_date     0
+day_name      0
+month_name    0
+month         0
+quarter       0
+year          0
+dtype: int64
+2026-05-31 12:28:58,740 - INFO -             date_key  full_date   day_name month_name  month  quarter  year
+2024-01-01  20240101 2024-01-01     Monday    January      1        1  2024
+2024-01-02  20240102 2024-01-02    Tuesday    January      1        1  2024
+2024-01-03  20240103 2024-01-03  Wednesday    January      1        1  2024
+2024-01-04  20240104 2024-01-04   Thursday    January      1        1  2024
+2024-01-05  20240105 2024-01-05     Friday    January      1        1  2024
+2026-05-31 12:28:58,863 - ERROR - Error loading dim_date: 1062 (23000): Duplicate entry '20240101' for key 'dim_date.PRIMARY'
+2026-05-31 12:28:58,865 - INFO - Loaded 2557 records into dim_date
+2026-05-31 12:36:42,064 - INFO - loading sales data to the database
+2026-05-31 12:36:42,089 - INFO - customer_key      int64
+product_key     float64
+date_key          int64
+quantity          int64
+sale_amount     float64
+dtype: object
+2026-05-31 12:36:42,801 - INFO - customer_key          0
+product_key     6341896
+date_key              0
+quantity              0
+sale_amount           0
+dtype: int64
+2026-05-31 12:36:42,803 - INFO -    customer_key  product_key  date_key  quantity  sale_amount
+0         20953        457.0  20250218         1      3720.67
+1         20953       1457.0  20250218         1      3720.67
+2         20953       2457.0  20250218         1      3720.67
+3         20953       3457.0  20250218         1      3720.67
+4         20953       4457.0  20250218         1      3720.67
+2026-05-31 12:39:17,323 - ERROR - Error loading fact_sales: 1054 (42S22): Unknown column 'nan' in 'field list'
+2026-05-31 12:39:29,070 - INFO - loaded sales data to the database successfully
+2026-05-31 12:39:29,157 - INFO - Warehouse dimension loaded successfully
+2026-05-31 14:45:14,423 - INFO - warehouse connected to the database successfully
+2026-05-31 14:45:14,596 - INFO - Extracted 30000 records from customers.csv
+2026-05-31 14:45:14,597 - INFO - customer_id    int64
+first_name       str
+last_name        str
+email            str
+city             str
+state            str
+country          str
+dtype: object
+2026-05-31 14:45:14,612 - INFO - customer_id    0
+first_name     0
+last_name      0
+email          0
+city           0
+state          0
+country        0
+dtype: int64
+2026-05-31 14:45:14,614 - INFO -    customer_id first_name last_name                        email         city         state                country
+0            1       Mark      Chen   margaretclarke@example.com   Jamieburgh    New Jersey                 Tuvalu
+1            2   Virginia    Martin  stephanieramsey@example.com     Hullbury  Rhode Island  Saint Kitts and Nevis
+2            3    Jessica      Bell   jessicaswanson@example.com    Jamesside       Indiana            Afghanistan
+3            4     Ashley     Brown          kevin90@example.net  South Karen        Kansas                   Chad
+4            5    Natasha    Harvey           alec63@example.org    New Susan       Alabama                  Nauru
+2026-05-31 14:45:15,490 - INFO - Inserted rows 0 to 10000
+2026-05-31 14:45:16,174 - INFO - Inserted rows 10000 to 20000
+2026-05-31 14:45:16,736 - INFO - Inserted rows 20000 to 30000
+2026-05-31 14:45:16,736 - INFO - Loading into dim_customer
+2026-05-31 14:45:16,737 - INFO - Columns: ['customer_id', 'first_name', 'last_name', 'email', 'city', 'state', 'country']
+2026-05-31 14:45:16,737 - INFO - Loaded 30000 records into dim_customer
+2026-05-31 14:45:16,742 - INFO - Loaded 30000 records into dim_customer
+2026-05-31 14:45:16,777 - INFO - Extracted 1000 records from products.csv
+2026-05-31 14:45:16,779 - INFO - product_id        int64
+product_name        str
+category            str
+price           float64
+dtype: object
+2026-05-31 14:45:16,781 - INFO - product_id      0
+product_name    0
+category        0
+price           0
+dtype: int64
+2026-05-31 14:45:16,783 - INFO -    product_id product_name     category   price
+0           1      Serious       Sports  111.33
+1           2         Base       Sports  275.03
+2           3         Side     Clothing  139.54
+3           4         Hour  Electronics  676.70
+4           5       Detail        Books   86.94
+2026-05-31 14:45:16,835 - INFO - Inserted rows 0 to 1000
+2026-05-31 14:45:16,836 - INFO - Loading into dim_product
+2026-05-31 14:45:16,836 - INFO - Columns: ['product_id', 'product_name', 'category', 'price']
+2026-05-31 14:45:16,837 - INFO - Loaded 1000 records into dim_product
+2026-05-31 14:45:16,837 - INFO - Loaded 1000 records into dim_product
+2026-05-31 14:45:16,885 - INFO - date_key               int64
+full_date     datetime64[us]
+day_name                 str
+month_name               str
+month                  int32
+quarter                int32
+year                   int32
+dtype: object
+2026-05-31 14:45:16,888 - INFO - date_key      0
+full_date     0
+day_name      0
+month_name    0
+month         0
+quarter       0
+year          0
+dtype: int64
+2026-05-31 14:45:16,889 - INFO -             date_key  full_date   day_name month_name  month  quarter  year
+2024-01-01  20240101 2024-01-01     Monday    January      1        1  2024
+2024-01-02  20240102 2024-01-02    Tuesday    January      1        1  2024
+2024-01-03  20240103 2024-01-03  Wednesday    January      1        1  2024
+2024-01-04  20240104 2024-01-04   Thursday    January      1        1  2024
+2024-01-05  20240105 2024-01-05     Friday    January      1        1  2024
+2026-05-31 14:45:16,957 - ERROR - Error loading dim_date: 1062 (23000): Duplicate entry '20240101' for key 'dim_date.PRIMARY'
+2026-05-31 14:45:16,958 - INFO - Loaded 2557 records into dim_date
+2026-05-31 14:53:52,660 - INFO - loading sales data to the database
+2026-05-31 14:53:52,687 - INFO - customer_key      int64
+product_key     float64
+date_key          int64
+quantity          int64
+sale_amount     float64
+dtype: object
+2026-05-31 14:53:53,409 - INFO - customer_key          0
+product_key     6675680
+date_key              0
+quantity              0
+sale_amount           0
+dtype: int64
+2026-05-31 14:53:53,412 - INFO -    customer_key  product_key  date_key  quantity  sale_amount
+0         20953        457.0  20250218         1      3720.67
+1         20953       1457.0  20250218         1      3720.67
+2         20953       2457.0  20250218         1      3720.67
+3         20953       3457.0  20250218         1      3720.67
+4         20953       4457.0  20250218         1      3720.67
+2026-05-31 14:58:03,413 - ERROR - Error loading fact_sales: 1054 (42S22): Unknown column 'nan' in 'field list'
+2026-05-31 14:58:20,254 - INFO - loaded sales data to the database successfully
+2026-05-31 14:58:20,347 - INFO - Warehouse dimension loaded successfully
